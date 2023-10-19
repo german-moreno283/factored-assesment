@@ -7,3 +7,5 @@
 ### The frontend is built using purely reactJS, the requests to the database are made through async functions and fetch.
 
 ### In order for everything to work correctly, please run first the backend service and then the frontend.
+
+### All the container build and runs must be done in the parent folder.
