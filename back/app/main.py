@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-import database
+from .database import get_all_elements, get_element_by_username
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
@@ -9,11 +9,11 @@ async def root():
 
 @app.get("/users/{username}")
 async def get_user(username:str):
-  return database.get_element_by_username(username)
+  return get_element_by_username(username)
 
 @app.get("/users")
 async def get_users():
-  return database.get_all_elements()
+  return get_all_elements()
 
 
 app.add_middleware(

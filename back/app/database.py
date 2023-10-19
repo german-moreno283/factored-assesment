@@ -1,7 +1,7 @@
 from sqlalchemy import text, create_engine
 import json
 
-engine = create_engine("sqlite+pysqlite:///:memory:", echo=True)
+engine = create_engine("sqlite+pysqlite:///:memory:", echo=True, future=True)
 
 with engine.connect() as conn:
     conn.execute(text("CREATE TABLE users (id int, username str,password str,name str, position str, avatar str, skillSet json)"))

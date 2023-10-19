@@ -1,0 +1,11 @@
+# Ignore Python compiled files
+*.pyc
+__pycache__/
+
+# Ignore pipenv virtual environment
+/.venv/
+
+# Ignore local development files
+*.log
+*.sqlite3
+
